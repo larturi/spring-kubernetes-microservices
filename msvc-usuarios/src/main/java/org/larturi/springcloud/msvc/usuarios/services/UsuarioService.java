@@ -1,6 +1,5 @@
 package org.larturi.springcloud.msvc.usuarios.services;
 
-import org.apache.catalina.User;
 import org.larturi.springcloud.msvc.usuarios.models.entity.Usuario;
 import org.larturi.springcloud.msvc.usuarios.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +29,8 @@ public class UsuarioService implements IUsuarioService {
 
     @Override
     @Transactional
-    public User save(Usuario usuario) {
-        return (User) usuarioRepository.save(usuario);
+    public Usuario save(Usuario usuario) {
+        return usuarioRepository.save(usuario);
     }
 
     @Override
